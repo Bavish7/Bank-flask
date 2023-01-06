@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/style.css">
+<link rel="stylesheet" media="screen and (max-width: 1000px)" href="/static/phone.css">
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anybody&family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Carter+One&family=Gabriela&family=PT+Serif&display=swap" rel="stylesheet">
+<style>
+
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  /* background-color: rgb(107,217,247); */
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 20px;}
+}
+
+
+</style>
+</head>
+<body>
+<nav id="navbar">
+  <div id="logo">
+      <img src="/static/star-bank-logo 2.png" alt="StarBank.com">
+  </div>
+  <ul>
+      {% if session==True %}
+      <li class="item"><a href="{{url_for('home')}}">Home</a></li>
+      <li class="item"><a href="{{url_for('services')}}">Services</a></li>
+      <li class="item"><a href="{{url_for('logout')}}">Logout</a></li>
+      <li class="item"><a href="{{url_for('help')}}">FAQ's</a></li>
+      {% else %}
+      <li class="item"><a href="{{url_for('login')}}">Login / Register</a></li>
+      <li class="item"><a href="{{url_for('help')}}">FAQ's</a></li>
+      {% endif %}
+  </ul>
+</nav>
+<section id="home">
+  <h1 class="h-primary">WELCOME TO STAR BANK</h1> 
+  <p>Depositing money, opening accounts, checking cibil score and withdrawing money once meant travelling to the branch office, long queues at the Bank, and a whole day wasted. But what were tedious tasks once, can now be managed within a few clicks and from the comfort of your home. Financial transactions have changed for the better with the advent of internet banking services. E-banking services have made the process of banking much simpler today. At STAR Bank , you can avail internet banking services quite like the ones you would receive at a physical bank without moving out of your own home. Every banking service you ever needed is now just a click away with  STAR Bank's personal e-banking facilities.</p>
+
+</section>    
+
+</body>
+</html> 
+

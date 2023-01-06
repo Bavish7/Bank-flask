@@ -1,0 +1,27 @@
+<html lang="en">
+	<head>
+		<title>update</title>
+		<link rel="stylesheet" href="/static/style.css">
+		<link rel="stylesheet" media="screen and (max-width: 1000px)" href="/static/phone.css">
+		<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Anybody&family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Carter+One&family=Gabriela&family=PT+Serif&display=swap" rel="stylesheet">
+	</head>
+	<body>
+			<div class="content" id="in-services" align="center"></br>
+				<div class="sub">
+				<h1>Fill Your Details to Update</h1></br>
+				<form action="{{ url_for('update') }}" method="post" autocomplete="off">
+					<div class="msg">{{ msg }}</div>
+					<input type="password" name="pin" placeholder="Enter Your Transaction PIN" class="sub-text" id="pin" required></br>
+					<input type="password" name="npin" placeholder="Enter New Transaction PIN" class="sub-text" id="npin" required></br>
+					<input type="text" name="phone_no" placeholder="Enter New Mobile Number" class="sub-text" id="phone_no" required></br>
+					<input type="text" name="address" placeholder="Enter Your Address" class="sub-text" id="address" required></br></br>
+					<input type="submit" class="btn" value="Update">
+				</form>					
+				</div>				
+			</div>
+	</body>
+</html>

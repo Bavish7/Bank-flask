@@ -1,0 +1,50 @@
+<html lang="en">
+	<head>
+		<title>display</title>
+		<link rel="stylesheet" href="/static/style.css">
+		<link rel="stylesheet" media="screen and (max-width: 1000px)" href="/static/phone.css">
+		<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Anybody&family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Carter+One&family=Gabriela&family=PT+Serif&display=swap" rel="stylesheet">
+	</head>
+    <body>
+        <section id="out-services">
+            <div class="out-services" align="center">
+                {% if output==True %}
+                {% block content %}
+                <div class="border">
+                    <table class="worddark">
+                        <thead>
+                            <tr>
+                                <th>Email</th>
+                                <th>Account Type</th>
+                                <th>Date</th>
+                                <th>Amount Sent</th>
+                                <th>Sent To</th>
+                                <th>Amount Received</th>
+                                <th>Received From</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in output_data %}
+                            <tr>
+                                <td>{% print(row[0]) %}</td>
+                                <td>{{row[1]}}</td>
+                                <td>{{row[2]}}</td>
+                                <td>{{row[3]}}</td>
+                                <td>{{row[4]}}</td>
+                                <td>{{row[5]}}</td>
+                                <td>{{row[6]}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>			
+                    </table>
+                </div>
+                {% endblock %}
+                {% endif %}										
+            </div>		
+        </section>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Create Savings Account </title>
+		<link rel="stylesheet" href="/static/style.css">
+		<link rel="stylesheet" media="screen and (max-width: 1000px)" href="/static/phone.css">
+		<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Anybody&family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Carter+One&family=Gabriela&family=PT+Serif&display=swap" rel="stylesheet">	
+	</head>
+	<body>
+		<div class="mobilecontent" id="in-services" align="center">
+			<div class="sub">
+				<h1>Mobile Transaction</h1>
+			</div></br>
+			<div class="upibottom">
+			<form action="{{ url_for('mobile')}}" method="post" autocomplete="off">
+			<div class="msg">{{ msg }}</div>
+
+			<input type="password" name="pin" placeholder="Enter Your 4-digit Transaction PIN" class="sub-text" id="pin" required></br>
+			<input type="text" name="phone_no" placeholder="Enter Receiver's Mobile Number" class="sub-text" id="phone_no" required></br>
+			<input type="text" name="amt" placeholder="Enter Amount" class="sub-text" id="amt" required></br></br>
+			<input type="submit" class="btn" value="Send">
+			</form>
+			</div>
+		</div>
+	</body>
+</html>

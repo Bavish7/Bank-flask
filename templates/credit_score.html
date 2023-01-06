@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Credit Score</title>
+		<link rel="stylesheet" href="/static/style.css">
+		<link rel="stylesheet" media="screen and (max-width: 1000px)" href="/static/phone.css">
+		<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Anybody&family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Carter+One&family=Gabriela&family=PT+Serif&display=swap" rel="stylesheet">	
+	</head>
+	<body>
+		<div class="currentcontent" id="in-services" align="center">
+			<div class="sub">
+				<h1>Credit Score</h1>
+			</div></br>
+			<div class="currentbottom">
+			<form action="{{ url_for('credit_score')}}" method="post" autocomplete="off">
+			<div class="msg">{{ msg }}</div>
+			<input type="password" name="pin" placeholder="Enter Your 4-digit Transaction PIN" class="sub-text" id="pin" required></br>
+			<input type="text" name="age" placeholder="Enter Your Age" class="sub-text" id="age" required></br>
+			<input type="text" name="home" placeholder="Do you have permanent address(y/n)" class="sub-text" id="house" required></br>
+			<input type="text" name="income" placeholder="Enter Your Income" class="sub-text" id="income" required></br>
+			<input type="text" name="credit" placeholder="Enter no. of Credits" class="sub-text" id="credit" required></br>
+			<input type="text" name="year" placeholder="Enter duration of Credit History" class="sub-text" id="year" required></br>
+			<input type="text" name="delay" placeholder="Enter No. of Delay/Late Payments" class="sub-text" id="delay" required></br></br>
+			<input type="submit" class="btn" value="Submit"></br>
+			<div class="msg">{{ msg1 }} {{score}}</div>	
+			</form>
+			</div>
+		</div>
+	</body>
+</html>

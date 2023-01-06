@@ -1,0 +1,28 @@
+<html lang="en">
+	<head>
+		<title>home</title>
+		<link rel="stylesheet" href="/static/style.css">
+		<link rel="stylesheet" media="screen and (max-width: 1000px)" href="/static/phone.css">
+		<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Anybody&family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Carter+One&family=Gabriela&family=PT+Serif&display=swap" rel="stylesheet">>
+	</head>
+
+	<body>
+		<div class="content" id="in-services" align="center">
+			<div class="sub">
+				<h2>Delete Account</h2>					
+			</div></br>
+			<div class="contentbar">
+				<form action="{{ url_for('delete')}}" method="post" autocomplete="off">
+					<input type="password" name="pin" placeholder="Enter your 4-Digit Transaction PIN" class="sub-text" id="pin" required></br></br>
+					<input type="text" name="delete" placeholder="Do you want to delete your account?" class="sub-text" id="delete" required></br></br>
+					<input type="submit" class="btn" value="Submit"></br></br>
+					<div class="msg">{{ msg }}</div>
+			</form>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,81 @@
+<html lang="en">
+	<head>
+		<title>home</title>
+		<link rel="stylesheet" href="/static/style.css">
+		<link rel="stylesheet" media="screen and (max-width: 1000px)" href="/static/phone.css">
+		<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Anybody&family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Carter+One&family=Gabriela&family=PT+Serif&display=swap" rel="stylesheet">
+	</head>
+	<body>
+			<div class="faq">
+				<h1 class="h-primary-faq">Frequently Asked Questions</h1>
+				<button class="faq-btn">What are the facilities available on Star Bank Mobile? 
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="faq-container">
+					<a>Star Bank Mobile makes banking a lot simpler! You don't have to visit a Branch or an ATM anymore for services like Mini Statement, Balance Enquiry, Fund Transfer . Star Bank Mobile also gives you added features like personalization features etc.</a>
+				</div>
+
+				<button class="faq-btn">Can anyone else use my Star Bank Mobile? 
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="faq-container">
+					<a>Star Bank Mobile is user specific. It requires a 4 digit PIN code that is recognized by the Bank for any transactions via the application. It is a safe and secure process as the application provides two-step verification. For matter of safety, you are requested not to share your Star Bank Mobile PIN with anyone.</a>
+				</div>
+
+				<button class="faq-btn">How do I register for the application?
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="faq-container">
+					<a>You have to provide a gmail account and a pin that will be registered with Star Bank Mobile. For more security you have to Enter a transaction PIN everytime you perform any operation.</a>
+				</div>
+
+				<button class="faq-btn">What should I keep in mind while setting the PIN?
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="faq-container">
+					<a>You should not set a PIN which is repetitive or sequential. Kindly Enter unique digits while setting PIN and make sure your transaction PIN is different from the other PIN</a>
+				</div>
+
+				<button class="faq-btn">How many transactions can I see in the transaction history option?
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="faq-container">
+					<a>There will be three options. You can either view all transactions or can see last few transactions or specifically select the range of dates for viewing your transactions.</a>
+				</div>
+
+				<button class="faq-btn">What will be the order of the transactions in Transaction History?
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="faq-container">
+					<a>The transactions will be visible to the customer in the reverse chronological order .i.e. the latest transaction will be the first to appear in the list.</a>
+				</div>
+
+				<button class="faq-btn">Are there any additional security measures that I should take?
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="faq-container">
+					<a>Yes, do not reveal your Internet banking login ID, password or your PIN to anyone. Do not store any of these details on your mobile phone.</a>
+				</div>
+			</div>
+			<script>
+				var dropdown = document.getElementsByClassName("faq-btn");
+				var i;
+				
+				for (i = 0; i < dropdown.length; i++) {
+				  dropdown[i].addEventListener("click", function() {
+					this.classList.toggle("active-faq");
+					var dropdownContent = this.nextElementSibling;
+					if (dropdownContent.style.display === "block") {
+					  dropdownContent.style.display = "none";
+					} else {
+					  dropdownContent.style.display = "block";
+					}
+				  });
+				}
+			</script>
+	</body>
+</html>

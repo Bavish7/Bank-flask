@@ -1,0 +1,52 @@
+<html lang="en">
+	<head>
+		<title>display</title>
+		<link rel="stylesheet" href="/static/style.css">
+		<link rel="stylesheet" media="screen and (max-width: 1000px)" href="/static/phone.css">
+		<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Anybody&family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Carter+One&family=Gabriela&family=PT+Serif&display=swap" rel="stylesheet">
+	</head>
+	<body>
+			<div class="content" id="in-services" align="center"></br>
+				<div class="sub">
+					<h1>Your Details</h1> </br>
+					{% block content %}
+						<div class="border">
+							<table class="worddark-1"></br></br>
+								<tr>
+									<td>Email:</td>
+									<td>{{ account['email'] }}</td>
+								</tr>
+								<tr>
+									<td>Account Number:</td>
+									<td>{{ account['acct_no'] }}</td>
+								</tr>
+								<tr>
+									<td>Account Type:</td>
+									<td>{{ account['actype'] }}</td>
+								</tr>
+								<tr>
+									<td>Name:</td>
+									<td>{{ account['acct_name'] }}</td>
+								</tr>
+								<tr>
+									<td>Mobile Number:</td>
+									<td>{{ account['phone_no'] }}</td>
+								</tr>
+								<tr>
+									<td>Address:</td>
+									<td>{{ account['address'] }}</td>
+								</tr>
+								<tr>
+									<td>Current Amount:</td>
+									<td>{{ account['current_amt'] }}</td>
+								</tr>						
+							</table>
+						</div>
+					{% endblock %}										
+				</div>
+	</body>
+</html>

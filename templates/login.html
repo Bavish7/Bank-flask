@@ -1,0 +1,47 @@
+<!--Store this code in 'login.html' file inside the 'templates' folder-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Login/Register </title>
+		<link rel="stylesheet" href="/static/style.css">
+		<link rel="stylesheet" media="screen and (max-width: 1000px)" href="/static/phone.css">
+		<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Anybody&family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Carter+One&family=Gabriela&family=PT+Serif&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<section id="login">
+			<div class="logincontent" align="center">
+				<div class="logintop">
+					<h1>Login</h1>
+				</div></br></br></br></br>
+				<div class="loginbottom">
+					<form action="{{ url_for('login')}}" method="post" autocomplete="off">
+						<div class="msg">{{ msg }}</div>
+						<input type="text" name="email" placeholder="Enter Your Email" class="textbox" id="email" required></br></br>
+						<input type="password" name="passwd" placeholder="Enter Your 4-digit PIN" class="textbox" id="password" required></br></br></br>
+				<input type="submit" class="btn" value="Login">
+				</form></br></br>
+				</div>
+			</div>
+
+			<div class="vl"></div>
+
+			<div class="registercontent" align="center">
+				<div class="logintop">
+				<h1>Register</h1>
+			</div></br></br></br></br>
+			<div class="loginbottom">
+				<form action="{{ url_for('register')}}" method="post" autocomplete="off">
+					<div class="msg1">{{ msg1 }}</div>
+					<input type="text" name="email" placeholder="Enter Your Email ID" class="textbox" id="email" required></br></br>
+					<input type="password" name="passwd" placeholder="Enter Your 4-digit PIN" class="textbox" id="pin1" required></br></br></br>
+				<input type="submit" class="btn" value="Register">
+				</form></br></br>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

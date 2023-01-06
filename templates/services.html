@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/style.css">
+<link rel="stylesheet" media="screen and (max-width: 1000px)" href="/static/phone.css">
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anybody&family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section id="services">
+    <div class="sidenav">
+      <button class="dropdown-btn">Create Account 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="{{url_for('savings')}}">Savings Account</a>
+        <a href="{{url_for('current')}}">Current Account</a>
+      </div>
+      <button class="dropdown-btn">New Transaction 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="{{url_for('upi')}}">UPI Transfer</a>
+        <a href="{{url_for('mobile')}}">Mobile Number</a>
+        <a href="{{url_for('bank')}}">Bank Transfer</a>
+      </div>
+      <button class="dropdown-btn">Customer Details 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="{{url_for('display')}}">Display Details</a>
+        <a href="{{url_for('update')}}">Update Details</a>
+      </div>
+      <button class="dropdown-btn">Show Transactions 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="{{url_for('all_transactions')}}">All Transactions</a>
+        <a href="{{url_for('last_transactions')}}">Last 10 Transactions</a>
+        <a href="{{url_for('date')}}">Range Of Dates</a>
+      </div>
+      <a href="{{url_for('credit_score')}}">Credit Score</a>
+      <a href="{{url_for('delete')}}">Delete Account</a>
+    </div>
+      
+      <h1 class="h-primary-services">Our Services</h1>
+      <p>Open a bank account anytime, anywhere.
+    You can now complete your bank-related activities from the comfort of your home.Innovating and intuitive online banking services help you move money between accounts with utmost ease.Banking services help you stay on track with your saving goals with the help of savings account that provide maximum returns. Internet banking allows 24/7 access to your bank account and its associated services.</p>
+      
+    <script>
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </section>
+
+</body>
+</html> 

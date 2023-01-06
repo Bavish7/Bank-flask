@@ -1,0 +1,26 @@
+<html lang="en">
+	<head>
+		<title>display</title>
+		<link rel="stylesheet" href="/static/style.css">
+		<link rel="stylesheet" media="screen and (max-width: 1000px)" href="/static/phone.css">
+		<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Anybody&family=Bree+Serif&family=Lobster+Two&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Carter+One&family=Gabriela&family=PT+Serif&display=swap" rel="stylesheet">
+	</head>
+	<body>
+        <section id="in-services">
+			<div class="in-services" align="center"></br>
+                <div class="sub">
+					<h1>Your Details</h1> </br>
+                    <form action="{{ url_for('last_transactions') }}" method="post" autocomplete="off">
+                        <div class="msg">{{ msg }}</div>
+                        <input type="password" name="pin" placeholder="Enter Your Transaction PIN" class="sub-text" id="pin" required></br></br>
+                        <input type="submit" class="btn" value="Submit">
+                    </form>
+                </div>
+            </div>	
+        </section>		
+	</body>
+</html>
