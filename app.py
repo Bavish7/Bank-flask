@@ -480,4 +480,4 @@ def logout():
     return render_template('home.html',session=False)
 
 if __name__ == "__main__":
-	app.run(host ="localhost", port = int("5000"))
+	app.run(debug=False, host ='0.0.0.0')
